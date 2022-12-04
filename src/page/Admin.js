@@ -232,6 +232,7 @@ const Admin = () => {
                           <s.TextTableName>Rarity</s.TextTableName>
                           <s.TextTableName>firstOwner</s.TextTableName>
                           <s.TextTableName>Owner</s.TextTableName>
+                          <s.TextTableName>Time</s.TextTableName>
                         </s.StyledTableContent>
                         {searchResults != null ? (
                         <>  
@@ -244,6 +245,7 @@ const Admin = () => {
                               <s.TextTableEvent>{item.rarity}</s.TextTableEvent>
                               <s.TextTableEvent>{item.firstOwner.substring(0, 6)}...{item.firstOwner.substring(item.firstOwner.length - 4)}</s.TextTableEvent>
                               <s.TextTableEvent>{item.currentOwner.substring(0, 6)}...{item.currentOwner.substring(item.currentOwner.length - 4)}</s.TextTableEvent>
+                              <s.TextTableEvent>{fromNow(item.sellTime * 1000)}</s.TextTableEvent>
                             </s.StyledTableRow>
                           )
                         })}
@@ -291,7 +293,7 @@ const Admin = () => {
                           <s.TextTableName>Gen</s.TextTableName>
                           <s.TextTableName>First Owner</s.TextTableName>
                           <s.TextTableName>Owner</s.TextTableName>
-                          <s.TextTableName>Time</s.TextTableName>
+                          <s.TextTableName>Name</s.TextTableName>
                         </s.StyledTableContent>
                         {searchResults != null ? (
                         <>  
@@ -303,7 +305,7 @@ const Admin = () => {
                                 <s.TextTableEvent>{item.gen0}</s.TextTableEvent>
                                 <s.TextTableEvent>{item.firstOwner.substring(0, 6)}...{item.firstOwner.substring(item.firstOwner.length - 4)}</s.TextTableEvent>
                                 <s.TextTableEvent>{item.currentOwner.substring(0, 6)}...{item.currentOwner.substring(item.currentOwner.length - 4)}</s.TextTableEvent>
-                                <s.TextTableEvent>{fromNow(item.sellTime * 1000)}</s.TextTableEvent>
+                                <s.TextTableEvent>{item.name}</s.TextTableEvent>
                             </s.StyledTableRow>
                           )
                         })}
@@ -317,8 +319,7 @@ const Admin = () => {
                               <s.TextTableEvent>{blockchain.web3.utils.fromWei(item.sell, "ether")} BNB</s.TextTableEvent>
                               <s.TextTableEvent>{item.firstOwner.substring(0, 6)}...{item.firstOwner.substring(item.firstOwner.length - 4)}</s.TextTableEvent>
                               <s.TextTableEvent>{item.currentOwner.substring(0, 6)}...{item.currentOwner.substring(item.currentOwner.length - 4)}</s.TextTableEvent>
-                              <s.TextTableEvent>{item.previousOwner.substring(0, 6)}...{item.previousOwner.substring(item.previousOwner.length - 4)}</s.TextTableEvent>
-                              <s.TextTableEvent>{fromNow(item.sellTime * 1000)}</s.TextTableEvent>
+                              <s.TextTableEvent>{item.name}</s.TextTableEvent>
                             </s.StyledTableRow>
                           )
                         })}

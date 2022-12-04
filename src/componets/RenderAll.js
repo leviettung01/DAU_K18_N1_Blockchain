@@ -27,7 +27,7 @@ const RenderAll = ({ data, loading }) => {
                         </Link>
                     </s.StyledImg>
                     <s.Container>
-                    {(item.sell > 0) ? (<s.TextDescription style={{color: "Red"}}> On Sell</s.TextDescription>) :(<s.TextDescription></s.TextDescription>)}
+                    {(item.sell > 0) ? (<s.TextDescription style={{color: "Red"}}> On Sell</s.TextDescription>) :(<s.TextDescription style={{color: "lightgreen"}}> On Stock</s.TextDescription>)}
                         <s.StyledTextBox>
                             {(item.gen0 === "1" || item.gen0 === "0") ?
                                 (<s.TextDescription>{item.name}</s.TextDescription>)

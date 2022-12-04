@@ -1489,7 +1489,7 @@ export const InputSearch = styled.input.attrs({type: "search"})`
   border-radius: 0.4rem;
   padding: 0 20px;
   font-size: 15px;
-  color: #fff;
+  color: #000;
   transition: 0.3s;
 
   &:focus {

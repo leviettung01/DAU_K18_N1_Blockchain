@@ -150,7 +150,7 @@ const Mynft = () => {
                 className={toggleState === 2 ? "active-tab" : null}
                 onClick={() => toggleTab(2)}
               >
-                On sale {toggleState === 2 ? '(' + data.allOwnerJewells.filter(item => item.sell > 0).length + ')' : null}
+                On Sell {toggleState === 2 ? '(' + data.allOwnerJewells.filter(item => item.sell > 0).length + ')' : null}
               </s.TabHome>
               <s.TabHome
                 className={toggleState === 3 ? "active-tab" : null}
